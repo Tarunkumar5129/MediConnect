@@ -14,12 +14,14 @@ const Doctors = () => {
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state.root);
 
-  const fetchAllDocs = async () => {
-    dispatch(setLoading(true));
-    const data = await fetchData(`/doctor/getalldoctors`);
-    setDoctors(data);
-    dispatch(setLoading(false));
-  };
+ const fetchAllDocs = async () => {
+  dispatch(setLoading(true));
+  const data = await fetchData(`/doctor/getalldoctors`);
+  console.log("doctors payload:", data);
+  setDoctors(data);
+  dispatch(setLoading(false));
+};
+
 
   useEffect(() => {
     fetchAllDocs();
