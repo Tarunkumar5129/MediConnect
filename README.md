@@ -1,6 +1,8 @@
 <div id="top">
 <h1 align="center">MediConnect 🧑‍⚕️</h1>
-
+<h2>Test Credentials</h2>
+  <h3>username-demo123@gmail.com</h3>
+  <h3>password-demo@123</h3>
 <div align="center">
   <br>
   <img src="https://img.shields.io/github/repo-size/TarunKumar5129/MediConnect?style=for-the-badge" />
@@ -24,7 +26,7 @@ Welcome to our comprehensive healthcare platform! Our website offers a seamless 
 
 ### 🌐 Link:
 
-<h4> Live Site: https://MediConnect.onrender.com/ </h4>
+<h4> Live Site: https://medi-connect-jangam-tarun-kumars-projects.vercel.app/ </h4>
 
 <br>
 
