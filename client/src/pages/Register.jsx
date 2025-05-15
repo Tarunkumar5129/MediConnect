@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN;
 
 function Register() {
-  const [file, setFile] = useState("");
+  const [file, setFile] = useState("https://via.placeholder.com/150");
   const [loading, setLoading] = useState(false);
   const [formDetails, setFormDetails] = useState({
     firstname: "",
@@ -51,6 +51,11 @@ function Register() {
       e.preventDefault();
 
       if (loading) return;
+      if (!file) {
+        toast.error("Please upload a profile picture");
+        return;
+      }
+
       if (file === "") return;
 
       const { firstname, lastname, email, password, confpassword } =
@@ -90,10 +95,7 @@ function Register() {
     <section className="register-section flex-center">
       <div className="register-container flex-center">
         <h2 className="form-heading">Sign Up</h2>
-        <form
-          onSubmit={formSubmit}
-          className="register-form"
-        >
+        <form onSubmit={formSubmit} className="register-form">
           <input
             type="text"
             name="firstname"
@@ -151,10 +153,7 @@ function Register() {
         </form>
         <p>
           Already a user?{" "}
-          <NavLink
-            className="login-link"
-            to={"/login"}
-          >
+          <NavLink className="login-link" to={"/login"}>
             Log in
           </NavLink>
         </p>
