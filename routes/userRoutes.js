@@ -4,7 +4,7 @@ const userController = require("../controllers/userController");
 const userRouter = express.Router();
 
 userRouter.get("/getuser/:id", auth, userController.getuser);
-
+userRouter.get("/api/health", (req, res) => res.json({ status: "OK" }));
 userRouter.get("/getallusers", auth, userController.getallusers);
 
 userRouter.post("/login", userController.login);
